@@ -9,7 +9,7 @@ permissions: {}
 
 jobs:
   build:
-    name: Linter
+    name: GitHub Super Linter
     runs-on: ubuntu-latest
 
     permissions:
@@ -29,6 +29,7 @@ jobs:
       - name: Super-linter
         uses: super-linter/super-linter@v7.4.0 # x-release-please-version
         env:
+          # just lint typescript and go files
           VALIDATE_GO: true
           VALIDATE_TYPESCRIPT_ES: true
           # To report GitHub Actions status checks
